@@ -1,4 +1,7 @@
 package com.learning.lakesidehotel.Repository;
 
-public class RoomRepository {
+import com.learning.lakesidehotel.Models.Room;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public interface RoomRepository extends MongoRepository<Room, Integer> {
 }
