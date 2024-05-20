@@ -1,6 +1,5 @@
 package com.learning.lakesidehotel;
 
-import com.learning.lakesidehotel.Models.BookedRoom;
 import com.learning.lakesidehotel.Repository.BookedRoomRepository;
 import com.learning.lakesidehotel.Repository.RoomRepository;
 import org.springframework.boot.SpringApplication;
