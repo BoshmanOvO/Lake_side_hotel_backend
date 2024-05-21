@@ -1,13 +1,13 @@
 [//]: # (write heading)
 
-# Lake Side Hotel Booking System
+# Lake Side Hotel Booking System (Back End)
 
 [//]: # (write description)
 
 This is a hotel booking system that allows users to book rooms in a hotel. 
 The system allows users to view available rooms, book rooms, and cancel bookings. 
 The system also allows the hotel manager to view all bookings and cancel bookings.
-The system is built using Java Spring boot and MongoDb as database
+The system is built using Java Spring boot and MongoDb as database.
 
 [//]: # (write table of contents)
 
