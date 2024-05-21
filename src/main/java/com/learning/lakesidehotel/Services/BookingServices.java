@@ -13,4 +13,5 @@ public class BookingServices {
     public List<BookedRoom> getAllBookingsByRoomId(Integer roomid) {
         return null;
     }
+
 }
