@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.apache.tomcat.util.codec.binary.Base64;
+import org.bson.types.Binary;
+import org.springframework.data.mongodb.core.mapping.MongoId;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -12,26 +14,27 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RoomResponce {
-    private Long id;
+    private Integer id;
     private String roomType;
-    private BigDecimal price;
+    private BigDecimal roomPrice;
     private boolean isBooked;
     private String photoUrl;
     private List<BookingResponce> bookings;
 
-    public RoomResponce(Long id, String roomType, BigDecimal price) {
+    public RoomResponce(Integer id, String roomType, BigDecimal price) {
         this.id = id;
         this.roomType = roomType;
-        this.price = price;
+        this.roomPrice = price;
     }
 
-    public RoomResponce(Long id, String roomType, BigDecimal price, boolean isBooked,
-                        byte [] photobyte, List<BookingResponce> bookings) {
+    public RoomResponce(Integer id, String roomType, BigDecimal price, boolean isBooked,
+                        Binary photobyte) {
         this.id = id;
         this.roomType = roomType;
-        this.price = price;
+        this.roomPrice = price;
         this.isBooked = isBooked;
-        this.photoUrl = photobyte != null ? Base64.encodeBase64String(photobyte) : null;
-        this.bookings = bookings;
+        this.photoUrl = photobyte != null ? Base64.encodeBase64String(photobyte.getData()) : null;
+//        this.bookings = bookings;
     }
+
 }
